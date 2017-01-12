@@ -5,10 +5,17 @@ import java.util.Date;
 /**
  * Created by csaper6 on 12/7/16.
  */
-public class Profile {
+public class Profile extends Person{
     private String fname;
     private Date birthday;
     private String lname;
+
+    public Profile(String firstName, String lastName, Date birthday) {
+        super(firstName, lastName);
+        this.fname = firstName;
+        this.birthday = birthday;
+        this.lname = lastName;
+    }
 
     public String getFname() {
         return fname;

@@ -3,6 +3,8 @@
     <color name="colorPrimary">#631e5b</color>
     <color name="colorPrimaryDark">#233cdc</color>
     <color name="colorAccent">#f50c10</color>
+    <color name="blue">#0055dd</color>
+    <color name="red">#ff1100</color>
     <item name="darkred" type="color">#47cc0000</item>
 
 </resources>

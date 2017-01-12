@@ -14,15 +14,15 @@ public class Guardian extends Person {
 
     }
 
-    public Guardian(String relationship, int age) {
-        this.occupation = relationship;
+    public Guardian(String job, int age) {
+        this.occupation = job;
         this.age = age;
     }
 
-    public Guardian(String firstName, String lastName, String relationship, int age) {
+    public Guardian(String firstName, String lastName, String job, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.occupation = relationship;
+        this.occupation = job;
         this.age = age;
     }
 }
