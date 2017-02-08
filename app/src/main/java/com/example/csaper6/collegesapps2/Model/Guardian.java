@@ -9,8 +9,10 @@ public class Guardian extends Person {
 
     public Guardian()
     {
-        occupation = "unemployed";
-        age = 16;
+        firstName = "Bob";
+        lastName = "Bobertson";
+        occupation = "Blob inspector";
+        age = -50;
 
     }
 
@@ -25,4 +27,14 @@ public class Guardian extends Person {
         this.occupation = job;
         this.age = age;
     }
+
+    public String getOccupation(){
+        return occupation;
+    }
+
+    @Override
+    public int getAge(){
+        return age;
+    }
+
 }

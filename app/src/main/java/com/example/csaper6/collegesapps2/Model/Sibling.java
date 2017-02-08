@@ -8,6 +8,7 @@ public class Sibling extends Person {
     private String relationship;
 
     public Sibling() {
+
         age = 10;
         relationship = "brother";
 
@@ -18,10 +19,19 @@ public class Sibling extends Person {
         this.relationship = relationship;
     }
 
-    public Sibling(String firstName, String lastName, int age, String relationship) {
+    public Sibling(String firstName, String lastName, String relationship, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.relationship = relationship;
+    }
+
+    @Override
+    public int getAge() {
+        return age;
+    }
+
+    public String getRelationship() {
+        return relationship;
     }
 }

@@ -7,14 +7,26 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.csaper6.collegesapps2.Presenter.AddFamilyMember"
     android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".Presenter.CreateAccount">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:src="@drawable/hi"/>
+    android:gravity="center">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="36dp"
+        android:text="Add Family Member"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:textOff="Guardian"
+            android:textOn="Sibling"
+            android:id="@+id/toggle"/>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
     <android.support.design.widget.TextInputEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,25 +40,12 @@
     <android.support.design.widget.TextInputEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="E-mail"
-        android:id="@+id/email"/>
-    <android.support.design.widget.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Username"
-        android:id="@+id/create_name"/>
-    <android.support.design.widget.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:id="@+id/create_password"
-        android:inputType="textPassword"/>
-    <android.support.design.widget.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Confirm Password"
-        android:id="@+id/create_password_confirm"
-        android:inputType="textPassword"/>
+        android:hint="Occupation"
+        android:id="@+id/info"/>
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:id="@+id/age"></NumberPicker>
     <Space
         android:layout_width="wrap_content"
         android:layout_height="20dp" />
