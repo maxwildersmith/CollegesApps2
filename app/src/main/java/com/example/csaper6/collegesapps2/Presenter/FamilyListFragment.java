@@ -7,6 +7,7 @@ package com.example.csaper6.collegesapps2.Presenter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +15,10 @@ import android.view.ViewGroup;
 import com.backendless.Backendless;
 import com.backendless.BackendlessCollection;
 import com.backendless.async.callback.BackendlessCallback;
+import com.backendless.exceptions.BackendlessFault;
 import com.example.csaper6.collegesapps2.Model.Guardian;
 import com.example.csaper6.collegesapps2.Model.Person;
+import com.example.csaper6.collegesapps2.Model.Sibling;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,6 +76,7 @@ public class FamilyListFragment extends ListFragment {
 
 
         updateList();
+
         //Comparator c = null;
         //Collections.sort(family, c);
 
@@ -86,20 +90,40 @@ public class FamilyListFragment extends ListFragment {
             @Override
             public void handleResponse(BackendlessCollection<Guardian> response) {
                 family.addAll(response.getData());
-                FamilyAdapter adapter = new FamilyAdapter(getActivity(), family);
 
-                setListAdapter(adapter);
 
 
             }
 
-
+            @Override
+            public void handleFault(BackendlessFault fault) {
+                Log.e("asdf",fault.toString());
+            }
         });
+
+        Backendless.Persistence.of(Sibling.class).find(new BackendlessCallback<BackendlessCollection<Sibling>>() {
+            @Override
+            public void handleResponse(BackendlessCollection<Sibling> response) {
+                family.addAll(response.getData());
+
+
+
+            }
+
+            @Override
+            public void handleFault(BackendlessFault fault) {
+                Log.e("asdf",fault.toString());
+            }
+        });
+
+        FamilyAdapter adapter = new FamilyAdapter(getActivity(), family);
+
+        setListAdapter(adapter);
     }
 
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        updateList();
+
     }
 }
