@@ -48,7 +48,7 @@ public class Login extends AppCompatActivity {
                                          Backendless.UserService.login(nameT, passwordT, new AsyncCallback<BackendlessUser>() {
                                              public void handleResponse(BackendlessUser user) {
                                                  pd.cancel();
-                                                 Toast.makeText(Login.this, "User:" + user.getUserId(), Toast.LENGTH_SHORT).show();
+                                                 //Toast.makeText(Login.this, "User:" + user.getUserId(), Toast.LENGTH_SHORT).show();
                                                  startActivity(new Intent(Login.this, MainActivity.class));
                                              }
 

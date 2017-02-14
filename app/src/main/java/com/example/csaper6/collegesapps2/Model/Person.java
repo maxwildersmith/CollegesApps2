@@ -7,6 +7,8 @@ public abstract class Person {
     protected String firstName;
     protected String lastName;
     protected int age;
+    protected String objectId;
+    protected String ownerId;
 
     public Person(){
         firstName = "roger";
@@ -33,6 +35,22 @@ public abstract class Person {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getObjectId() {
+        return objectId;
+    }
+
+    public void setObjectId(String objectId) {
+        this.objectId = objectId;
+    }
+
+    public String getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
     }
 
     public int getAge(){return age;}

@@ -29,7 +29,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".Presenter.MainActivity" />
         <activity android:name=".Presenter.AddFamilyMember" />
-        <activity android:name=".Presenter.StoreData"/>
+        <activity android:name=".Presenter.StoreData" />
+        <activity android:name=".Presenter.FamilyMemberActivity"></activity>
     </application>
 
 </manifest>

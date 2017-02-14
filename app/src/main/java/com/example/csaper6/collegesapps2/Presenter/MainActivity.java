@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,StoreData.class));
+                startActivity(new Intent(MainActivity.this,AddFamilyMember.class));
             }
         });
 
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity
         }
         else if(id == R.id.nav_family){
             Log.e("asdf","Family");
-            frag = new GuardianFragment();
+            frag = new FamilyListFragment();
         }
 
         if(frag!=null)

@@ -37,4 +37,8 @@ public class Guardian extends Person {
         return age;
     }
 
+    @Override
+    public String toString() {
+        return " Name: "+lastName+", "+firstName+" Job: "+occupation+" Age: "+age;
+    }
 }

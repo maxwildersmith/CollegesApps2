@@ -31,6 +31,11 @@ public class Sibling extends Person {
         return age;
     }
 
+    @Override
+    public String toString() {
+        return " Name: "+lastName+", "+firstName+" Relation: "+relationship+" Age: "+age;
+    }
+
     public String getRelationship() {
         return relationship;
     }
